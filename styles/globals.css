@@ -1,0 +1,113 @@
+/* @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+}
+
+body.custom-cursor {
+  cursor: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Scrollbar */
+/* ::-webkit-scrollbar { 
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #f12711, #f5af19);
+  border-radius: 4px; */
+/* }  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Reset base font size */
+html {
+  font-size: 14px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  overflow-x: hidden;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+body.custom-cursor {
+  cursor: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Fix for Material UI components */
+/* Control icon sizes */
+.MuiSvgIcon-root {
+  font-size: 1.5rem !important;
+}
+
+.MuiSvgIcon-fontSizeLarge {
+  font-size: 2rem !important;
+}
+
+.MuiSvgIcon-fontSizeSmall {
+  font-size: 1.25rem !important;
+}
+
+/* Control typography */
+.MuiTypography-h2 {
+  font-size: 2.5rem !important;
+}
+
+.MuiTypography-h5 {
+  font-size: 1.25rem !important;
+}
+
+.MuiTypography-body1 {
+  font-size: 1rem !important;
+}
+
+.MuiTypography-subtitle1 {
+  font-size: 1.1rem !important;
+}
+
+/* Control button sizes */
+.MuiButton-root {
+  font-size: 0.9rem !important;
+}
+
+.MuiIconButton-root {
+  padding: 8px !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.1);
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #f12711, #f5af19);
+  border-radius: 4px;
+}

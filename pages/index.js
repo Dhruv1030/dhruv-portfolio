@@ -158,7 +158,7 @@ const Home = () => {
               sx={{ display: "flex", alignItems: "center", fontSize: "1.8rem" }}
             >
               <Speed sx={{ mr: 1 }} />
-              Front-end Developer
+              Full stack Developer
             </Box>
           </Typography>
           <Typography

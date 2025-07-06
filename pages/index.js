@@ -191,7 +191,7 @@ const Home = () => {
             <Button
               variant="outlined"
               size="large"
-              onClick={() => navigate("/about")}
+              onClick={() => router.push("/about")}
               sx={{
                 borderRadius: "30px",
                 px: 4,

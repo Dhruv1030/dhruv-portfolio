@@ -10,6 +10,8 @@ import {
   Grid,
   Divider,
   Avatar,
+  Chip,
+  Button,
 } from "@mui/material";
 import {
   Timeline,
@@ -26,67 +28,85 @@ import {
   LocationOn,
   DateRange,
   ArrowDownward,
+  Code,
 } from "@mui/icons-material";
 
 const experienceData = [
   {
-    id: 2,
-    title: "Founder & SEO Specialist",
-    company: "Travelstic.com",
-    location: "Remote",
-    duration: "2024 - Present",
-    type: "experience",
+    id: 1,
+    title: "Full Stack Java Developer",
+    company: "Dentons",
+    location: "Toronto, ON",
+    duration: "Nov 2024 – Present",
+    type: "work",
     description: [
-      "Built and managed Travelstic, a travel-focused website optimized for SEO and user engagement.",
-      "Implemented advanced SEO strategies to increase organic traffic and search engine rankings.",
-      "Designed and customized the website using WordPress, ensuring optimal performance and UI/UX.",
-      "Developed content marketing strategies to enhance audience reach and engagement.",
-      "Monitored website analytics and optimized content based on performance data.",
+      "Developing Microservices using Spring Boot and integrating with AWS services like Lambda, SQS, DynamoDB, and CloudWatch.",
+      "Built scalable APIs with Spring Security (OAuth2, JWT), integrated Kafka and RabbitMQ for messaging.",
+      "Developed responsive UI with Angular, React.js, HTML5, CSS3 and modern JavaScript.",
+      "Implemented CI/CD using Jenkins and Docker containers deployed on Kubernetes clusters via Helm charts and OpenShift.",
+      "Performed testing using JMeter, Protractor, Jasmine, and used ELK stack for log analysis.",
     ],
     technologies: [
-      "WordPress",
-      "SEO",
-      "Google Analytics",
-      "Content Marketing",
-      "Web Performance Optimization",
+      "Java 11",
+      "Spring Boot",
+      "React.js",
+      "Angular",
+      "Kafka",
+      "AWS",
+      "Kubernetes",
+      "Docker",
+      "JMeter",
+      "RabbitMQ",
     ],
   },
-
   {
     id: 2,
-    title: "Advanced Diploma, Computer Programming",
-    company: "Georgian College",
-    location: "Toronto",
-    duration: "2023-2025",
-    type: "education",
+    title: "Java Developer",
+    company: "Infosys",
+    location: "Chennai, India",
+    duration: "Jan 2021 – Mar 2023",
+    type: "work",
     description: [
-      "Studying Object-oriented programming, scripting languages, application & web development",
+      "Developed microservices using Spring Boot, JPA, and secured APIs with Spring Security and OAuth2.",
+      "Built frontend apps using Angular 4.0, HTML5, CSS3 and Node.js.",
+      "Integrated Kafka for messaging and Spark Streaming for real-time data processing.",
+      "Worked with MongoDB for NoSQL storage and used Hibernate for ORM in RDBMS systems.",
+      "Managed AWS infrastructure and created Docker containers for deployment.",
     ],
-    technologies: [],
+    technologies: [
+      "Java 8",
+      "Spring Boot",
+      "Angular",
+      "Node.js",
+      "Kafka",
+      "MongoDB",
+      "Docker",
+      "AWS",
+      "Hibernate",
+    ],
   },
   {
     id: 3,
-    title: "Front-end developer",
-    company: "Ranogic IT Solutions",
-    location: "India",
-    duration: "JUL 2022 – Dec 2022",
-    type: "work",
+    title: "Advanced Diploma, Computer Programming",
+    company: "Georgian College",
+    location: "Toronto, ON",
+    duration: "2023 – 2025",
+    type: "education",
     description: [
-      "Designed and developed a web application to predict product stock for future requirements",
-      "Worked with technologies such as React, JavaScript, and NextJS",
-      "Developed applications using React and CSS",
-      "Collaborated in a team environment as an intern",
+      "Studying object-oriented programming, web development, cloud computing, and database systems.",
     ],
-    technologies: ["React", "JavaScript", "NextJS", "CSS"],
+    technologies: [],
   },
   {
     id: 4,
     title: "Diploma in Information Technology",
     company: "Gujarat Technological University",
     location: "India",
-    duration: "2019-2022",
+    duration: "2019 – 2022",
     type: "education",
-    description: ["Studied Java, PHP, HTML, CSS, OOPs concepts"],
+    description: [
+      "Studied programming languages including Java, PHP, HTML, CSS, and foundational computer science.",
+    ],
     technologies: ["Java", "PHP", "HTML", "CSS", "OOP"],
   },
 ];
@@ -114,6 +134,13 @@ const Experience = () => {
         ease: "easeOut",
       },
     },
+  };
+  const skillCategories = {
+    Frontend: ["React.js", "Angular", "JavaScript", "HTML5", "CSS3"],
+    Backend: ["Java 11", "Spring Boot", "Node.js", "REST APIs"],
+    DevOps: ["Docker", "Kubernetes", "Git"],
+    Cloud: ["AWS"],
+    Messaging: ["Kafka", "RabbitMQ"],
   };
 
   return (
@@ -165,13 +192,16 @@ const Experience = () => {
             gutterBottom
             sx={{ fontWeight: 600, color: theme.palette.primary.main }}
           >
-            Professional Journey
+            Full Stack Development Journey
           </Typography>
           <Typography variant="body1" paragraph>
-            With experience in front-end development and a strong educational
-            background in computer programming and information technology, I
-            have built a diverse skill set focusing on modern web technologies
-            and application development.
+            I am a Java Full Stack Developer with around 3 years of experience
+            building enterprise-grade applications using Java, Spring Boot,
+            Angular, React, and cloud platforms like AWS. I have delivered
+            scalable microservices, integrated REST APIs, and implemented secure
+            systems using OAuth2 and JWT. Skilled in Docker, Kubernetes, Kafka,
+            and modern CI/CD practices, I bring both backend strength and
+            frontend finesse to full-stack projects.
           </Typography>
           <Box
             sx={{
@@ -395,46 +425,60 @@ const Experience = () => {
                 <Typography
                   variant="h5"
                   gutterBottom
-                  sx={{ fontWeight: 600, color: theme.palette.primary.main }}
+                  sx={{
+                    fontWeight: 600,
+                    color: theme.palette.primary.main,
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                  }}
                 >
-                  Skills Summary
+                  <Code /> Tech Skills Summary
                 </Typography>
                 <Typography variant="body1" paragraph>
-                  With a strong foundation in front-end development and
-                  continuous learning in computer programming, I bring a
-                  comprehensive skill set to any project.
+                  Here are the core technologies and tools I have worked with
+                  professionally, organized by domain:
                 </Typography>
-                <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1, mt: 2 }}>
-                  {[
-                    "React",
-                    "NextJS",
-                    "JavaScript",
-                    "Typescript",
-                    "HTML5",
-                    "CSS",
-                    "Wordpress",
-                    "SASS",
-                    "Tailwind CSS",
-                    "Redux",
-                    "REST APIs",
-                    "Git",
-                  ].map((skill) => (
+                {Object.entries(skillCategories).map(([category, skills]) => (
+                  <Box key={category} sx={{ mt: 2 }}>
                     <Typography
-                      key={skill}
-                      variant="body2"
+                      variant="subtitle1"
                       sx={{
-                        px: 2,
-                        py: 1,
-                        borderRadius: 2,
-                        bgcolor: alpha(theme.palette.primary.main, 0.1),
-                        color: theme.palette.primary.main,
-                        fontWeight: 500,
+                        fontWeight: 600,
+                        mb: 1,
+                        color: theme.palette.secondary.main,
                       }}
                     >
-                      {skill}
+                      {category}
                     </Typography>
-                  ))}
-                </Box>
+                    <Box sx={{ display: "flex", flexWrap: "wrap", gap: 1 }}>
+                      {skills.map((skill) => (
+                        <Chip
+                          key={skill}
+                          label={skill}
+                          sx={{
+                            background:
+                              "linear-gradient(135deg, #f12711, #f5af19)",
+                            color: "#fff",
+                            fontWeight: "bold",
+                          }}
+                        />
+                      ))}
+                    </Box>
+                  </Box>
+                ))}
+                <Button
+                  variant="outlined"
+                  href="/skills"
+                  sx={{
+                    mt: 4,
+                    borderRadius: 2,
+                    borderColor: "#f12711",
+                    color: "#f12711",
+                  }}
+                >
+                  View Detailed Skills →
+                </Button>
               </Grid>
             </Grid>
           </Paper>

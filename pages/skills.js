@@ -13,13 +13,20 @@ import {
   SiReact,
   SiNextdotjs,
   SiJavascript,
-  SiHtml5,
   SiCss3,
   SiTailwindcss,
   SiTypescript,
   SiRedux,
   SiGit,
   SiNodedotjs,
+  SiJava,
+  SiSpring,
+  SiAngular,
+  SiApachenetbeanside,
+  SiApachekafka,
+  SiDocker,
+  SiKubernetes,
+  SiAwsamplify,
 } from "react-icons/si";
 
 const GradientText = styled.span`
@@ -94,14 +101,27 @@ const Skills = () => {
     { name: "React", icon: <SiReact />, color: "#61DAFB", level: 90 },
     { name: "Next.js", icon: <SiNextdotjs />, color: "white", level: 85 },
     { name: "JavaScript", icon: <SiJavascript />, color: "#F7DF1E", level: 90 },
-    { name: "HTML5", icon: <SiHtml5 />, color: "#E34F26", level: 95 },
     { name: "CSS3", icon: <SiCss3 />, color: "#1572B6", level: 85 },
     {
-      name: "Tailwind CSS",
-      icon: <SiTailwindcss />,
-      color: "#38B2AC",
+      name: "Docker",
+      icon: <SiDocker />,
+      color: "#2496ed",
+      level: 85,
+    },
+    {
+      name: "Kubernetes",
+      icon: <SiKubernetes />,
+      color: "#326ce5",
       level: 80,
     },
+
+    {
+      name: "Spring Boot",
+      icon: <SiSpring />,
+      color: "#6db33f",
+      level: 90,
+    },
+
     { name: "TypeScript", icon: <SiTypescript />, color: "#3178C6", level: 75 },
     { name: "Redux", icon: <SiRedux />, color: "#764ABC", level: 80 },
   ];
@@ -115,6 +135,11 @@ const Skills = () => {
     { icon: <SiTailwindcss />, color: "#38B2AC", name: "Tailwind" },
     { icon: <SiGit />, color: "#F05032", name: "Git" },
     { icon: <SiNodedotjs />, color: "#339933", name: "Node.js" },
+    {
+      icon: <SiSpring />,
+      color: "#6db33f",
+      name: "Spring Boot",
+    },
   ];
 
   return (

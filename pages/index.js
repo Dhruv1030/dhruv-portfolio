@@ -219,7 +219,7 @@ const Home = () => {
               <LinkedIn />
             </SocialButton>
             <SocialButton
-              href="mailto:dp14798@gmail.com"
+              href="mailto:dhruvp30.work@gmail.com"
               target="_blank"
               whileHover={{ scale: 1.1 }}
               whileTap={{ scale: 0.9 }}

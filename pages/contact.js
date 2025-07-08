@@ -114,15 +114,15 @@ const Contact = () => {
     {
       icon: <Email sx={{ fontSize: "1.5rem" }} />,
       title: "Email",
-      value: "dp14798@gmail.com",
-      link: "mailto:dp14798@gmail.com",
+      value: "dhruvp30.work@gmail.com",
+      link: "mailto:dhruvp30.work@gmail.com",
       color: theme.palette.primary.main,
     },
     {
       icon: <Phone sx={{ fontSize: "1.5rem" }} />,
       title: "Phone",
-      value: "+1 (438)-779-7004",
-      link: "tel:+14387797004",
+      value: "+1 (705)-400-7724",
+      link: "tel:+17054007724",
       color: theme.palette.secondary.main,
     },
     {

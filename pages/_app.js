@@ -6,6 +6,7 @@ import { darkTheme, lightTheme } from "../theme/theme";
 import Loading from "../components/Loading";
 import Cursor from "../components/Cursor";
 import Navbar from "../components/Navbar";
+import { Analytics } from "@vercel/analytics/next";
 
 function MyApp({ Component, pageProps }) {
   const [theme, setTheme] = useState("dark");
@@ -28,6 +29,7 @@ function MyApp({ Component, pageProps }) {
       <Cursor />
       <Navbar toggleTheme={toggleTheme} currentTheme={theme} />
       <Component {...pageProps} />
+      <Analytics />
     </ThemeProvider>
   );
 }

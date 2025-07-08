@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, Container, Grid, Paper } from "@mui/material";
+import { Box, Typography, Container, Grid, Paper, Button } from "@mui/material";
 import { motion } from "framer-motion";
 import {
   Speed,
@@ -7,6 +7,9 @@ import {
   Code,
   School,
   RocketLaunch,
+  Work,
+  Cloud,
+  FileDownload,
 } from "@mui/icons-material";
 import styled from "@emotion/styled";
 import {
@@ -62,28 +65,28 @@ const GradientText = styled("span")`
 const About = () => {
   const features = [
     {
-      icon: <Speed fontSize="large" />,
-      title: "High Performance",
+      icon: <Work fontSize="large" />,
+      title: "Full Stack Developer",
       description:
-        "Crafting optimized code that runs smoothly and efficiently, just like a well-tuned sports car.",
+        "3+ years of professional experience developing scalable microservices and front-end systems using Java, Spring Boot, React, and Angular.",
     },
     {
-      icon: <RocketLaunch fontSize="large" />,
-      title: "WordPress & SEO Specialist",
+      icon: <Cloud fontSize="large" />,
+      title: "Cloud & DevOps",
       description:
-        "Optimizing Travelstic for peak SEO performance and seamless WordPress management to drive traffic and engagement.",
+        "Hands-on with AWS, Docker, Kubernetes, and Jenkins CI/CD pipelines; deployed containerized applications to production on OpenShift.",
     },
     {
       icon: <Code fontSize="large" />,
-      title: "Front-end Specialist",
+      title: "Backend & API Specialist",
       description:
-        "Expertise in React.js, Next.js, and modern JavaScript to build responsive and interactive interfaces.",
+        "Proficient in building REST APIs using Spring Boot, with secure authentication using Spring Security, OAuth2, and JWT.",
     },
     {
-      icon: <School fontSize="large" />,
+      icon: <RocketLaunch fontSize="large" />,
       title: "Continuous Learning",
       description:
-        "Always studying new technologies and techniques to stay at the cutting edge of web development.",
+        "Passionate about learning emerging tech, contributing to open-source, and staying sharp with new frameworks and tools.",
     },
   ];
 
@@ -104,13 +107,29 @@ const About = () => {
             About <GradientText>Me</GradientText>
           </Typography>
           <Typography variant="body1" sx={{ mb: 6, maxWidth: "800px" }}>
-            I am Dhruv Patel, a front-end developer with a passion for creating
-            sleek, high-performance web applications. My approach to development
-            is influenced by my love for cars—focusing on efficiency, design,
-            and user experience. Just as a sports car needs to be both beautiful
-            and powerful, I believe websites should be visually appealing while
-            functioning flawlessly under the hood.
+            I am Dhruv Patel — a Java Full Stack Developer with around 3 years
+            of experience delivering high-performance web applications and
+            enterprise solutions. My stack includes Java 11, Spring Boot,
+            React.js, Angular, and cloud-native deployments using Docker and
+            AWS. I thrive on clean code, pixel-perfect UIs, and solving
+            real-world business problems with technology.
           </Typography>
+
+          <Button
+            variant="contained"
+            color="primary"
+            startIcon={<FileDownload />}
+            href="/Dhruv_Full_Stack_Java_Developer_Sample_Resume.pdf"
+            target="_blank"
+            rel="noopener"
+            sx={{
+              mb: 6,
+              borderRadius: 2,
+              background: "linear-gradient(90deg, #f12711, #f5af19)",
+            }}
+          >
+            Download Resume
+          </Button>
 
           <Grid container spacing={4}>
             {features.map((feature, index) => (
@@ -140,7 +159,29 @@ const About = () => {
             </Typography>
 
             <Timeline position="alternate">
-              <TimelineItem>
+              <TimelineItem position="left">
+                <TimelineSeparator>
+                  <TimelineDot sx={{ bgcolor: "#f12711" }}>
+                    <Work />
+                  </TimelineDot>
+                  <TimelineConnector />
+                </TimelineSeparator>
+                <TimelineContent>
+                  <Paper
+                    elevation={0}
+                    sx={{ p: 2, bgcolor: "background.paper" }}
+                  >
+                    <Typography variant="h6" component="h3">
+                      Full Stack Java Developer
+                    </Typography>
+                    <Typography variant="body2">
+                      Dentons, Toronto (2024–Present)
+                    </Typography>
+                  </Paper>
+                </TimelineContent>
+              </TimelineItem>
+
+              <TimelineItem position="right">
                 <TimelineSeparator>
                   <TimelineDot sx={{ bgcolor: "#f12711" }}>
                     <School />
@@ -156,13 +197,35 @@ const About = () => {
                       Advanced Diploma in Computer Programming
                     </Typography>
                     <Typography variant="body2">
-                      Georgian College, Toronto (2023-2025)
+                      Georgian College, Toronto (2023–2024)
                     </Typography>
                   </Paper>
                 </TimelineContent>
               </TimelineItem>
 
-              <TimelineItem>
+              <TimelineItem position="left">
+                <TimelineSeparator>
+                  <TimelineDot sx={{ bgcolor: "#f5af19" }}>
+                    <Work />
+                  </TimelineDot>
+                  <TimelineConnector />
+                </TimelineSeparator>
+                <TimelineContent>
+                  <Paper
+                    elevation={0}
+                    sx={{ p: 2, bgcolor: "background.paper" }}
+                  >
+                    <Typography variant="h6" component="h3">
+                      Java Developer
+                    </Typography>
+                    <Typography variant="body2">
+                      Infosys, Chennai (2021–2023)
+                    </Typography>
+                  </Paper>
+                </TimelineContent>
+              </TimelineItem>
+
+              <TimelineItem position="right">
                 <TimelineSeparator>
                   <TimelineDot sx={{ bgcolor: "#f5af19" }}>
                     <School />
@@ -175,32 +238,10 @@ const About = () => {
                     sx={{ p: 2, bgcolor: "background.paper" }}
                   >
                     <Typography variant="h6" component="h3">
-                      Front-end Developer
-                    </Typography>
-                    <Typography variant="body2">
-                      Ranogic IT Solutions, India (Nov 2018 – Dec 2019)
-                    </Typography>
-                  </Paper>
-                </TimelineContent>
-              </TimelineItem>
-
-              <TimelineItem>
-                <TimelineSeparator>
-                  <TimelineDot sx={{ bgcolor: "#f12711" }}>
-                    <Code />
-                  </TimelineDot>
-                  <TimelineConnector />
-                </TimelineSeparator>
-                <TimelineContent>
-                  <Paper
-                    elevation={0}
-                    sx={{ p: 2, bgcolor: "background.paper" }}
-                  >
-                    <Typography variant="h6" component="h3">
                       Diploma in Information Technology
                     </Typography>
                     <Typography variant="body2">
-                      Gujarat Technological University, India (2019-2022)
+                      Gujarat Technological University, India (2019–2022)
                     </Typography>
                   </Paper>
                 </TimelineContent>

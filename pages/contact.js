@@ -605,7 +605,7 @@ const Contact = () => {
               <Tooltip title="Email">
                 <IconButton
                   component="a"
-                  href="mailto:dp14798@gmail.com"
+                  href="mailto:dhruvp30.work@gmail.com"
                   sx={{
                     color: theme.palette.primary.main,
                     bgcolor: alpha(theme.palette.primary.main, 0.1),
@@ -621,7 +621,7 @@ const Contact = () => {
               <Tooltip title="Phone">
                 <IconButton
                   component="a"
-                  href="tel:+14387797004"
+                  href="tel:+17054007724"
                   sx={{
                     color: theme.palette.secondary.main,
                     bgcolor: alpha(theme.palette.secondary.main, 0.1),

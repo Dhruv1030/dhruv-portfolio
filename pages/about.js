@@ -119,7 +119,7 @@ const About = () => {
             variant="contained"
             color="primary"
             startIcon={<FileDownload />}
-            href="/Dhruv_Full_Stack_Java_Developer_Sample_Resume.pdf"
+            href="/resume/DhruvPatel.pdf"
             target="_blank"
             rel="noopener"
             sx={{

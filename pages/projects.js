@@ -47,7 +47,7 @@ const completedProjects = [
     title: "DhruvBot Pro™ — AI Assistant 🤖",
     description:
       "Chat with my AI twin trained on my experience, skills, and background. It can answer your questions, send push notifications, and log your interest — just like a smart agent should.",
-    image: "/images/dhruvbot.png", // 🔁 Replace with your actual image path
+    image: "/chatbot.svg", // 🔁 Replace with your actual image path
     technologies: ["OpenAI GPT-4o", "Python", "Gradio", "Pushover", "Render"],
     github: "https://github.com/Dhruv1030/dhruvbot-pro",
     liveDemo: "https://dhruvbot-pro.onrender.com",
@@ -194,10 +194,16 @@ const Projects = () => {
               >
                 <CardMedia
                   component="img"
-                  height="180"
                   image={project.image}
-                  alt={project.title}
+                  sx={{
+                    width: { md: "20%" },
+                    height: "auto", // Or use a fixed height like "300px"
+                    objectFit: "cover", // or "cover" depending on how you want it
+                    backgroundColor: "#f5f5f5", // optional for visibility
+                    // optional padding
+                  }}
                 />
+
                 <CardContent>
                   <Typography variant="h6" fontWeight={600} gutterBottom>
                     {project.title}
